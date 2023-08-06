@@ -1,9 +1,12 @@
 package com.example.Products.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@Setter
+@Getter
 @Document(collection = "user")
 public class User {
 
@@ -22,5 +25,9 @@ public class User {
         this.first_name = first_name;
         this.last_name = last_name;
         this.full_name = full_name;
+    }
+
+    public User() {
+
     }
 }
